@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Classifier</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #imagePreview {
+            max-width: 300px;
+            margin: 10px auto;
+        }
+        #prediction {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Image Classifier</h1>
+    <form id="uploadForm">
+        <input type="file" id="imageFile" accept="image/*" />
+        <input type="submit" value="Predict" />
+    </form>
+    <div id="imagePreview"></div>
+    <div id="prediction"></div>
+
+    <script>
+        const uploadForm = document.getElementById("uploadForm");
+        const imageFileInput = document.getElementById("imageFile");
+        const imagePreview = document.getElementById("imagePreview");
+        const prediction = document.getElementById("prediction");
+
+        uploadForm.addEventListener("submit", async (event) => {
+            event.preventDefault();
+            const file = imageFileInput.files[0];
+            if (!file) return;
+
+            const formData = new FormData();
+            formData.append("file", file);
+
+            const response = await fetch("http://localhost:8000/predict/", {
+                method: "POST",
+                body: formData,
+            });
+
+            const data = await response.json();
+
+            imagePreview.innerHTML = `<img src="${URL.createObjectURL(file)}" alt="Uploaded Image" />`;
+            prediction.innerHTML = `
+                <h2>Prediction:</h2>
+                <p>Prediction: ${data.predicted_class}</p>
+                <p>Confidence: ${data.confidence}%</p>
+            `;
+        });
+    </script>
+</body>
+</html>
