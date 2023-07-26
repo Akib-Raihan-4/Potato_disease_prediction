@@ -47,9 +47,8 @@
 
             imagePreview.innerHTML = `<img src="${URL.createObjectURL(file)}" alt="Uploaded Image" />`;
             prediction.innerHTML = `
-                <h2>Prediction:</h2>
-                <p>Prediction: ${data.predicted_class}</p>
-                <p>Confidence: ${data.confidence}%</p>
+                <h2>Prediction: ${data.predicted_class}</h2>
+                <h2>Confidence: ${data.confidence}%</h2>
             `;
         });
     </script>
