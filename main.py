@@ -17,7 +17,7 @@ app = FastAPI()
 
 model = tf.keras.models.load_model('potatoes.h5')  
 
-class_name = ['Potato___Early_blight', 'Potato___Late_blight', 'Potato___healthy']  
+class_name = ['Early blight', 'Late blight', 'healthy']  
 
 
 
