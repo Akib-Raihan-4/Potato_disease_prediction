@@ -19,19 +19,18 @@ The model is trained using the Adam optimizer and sparse categorical cross-entro
 # Visualizing Model Accuracy
 To visualize the accuracy of the trained model, Matplotlib was used. The accuracy metrics of the model are displayed graphically, providing insights into the model's performance during the training process.
 
-## Screenshots
-
+## Visualization 
 ![Web App without uploading](https://github.com/Akib-Raihan-4/Potato_disease_prediction/blob/main/Visualizing%20the%20training%20and%20validation%20accuracy%20and%20their%20loss.png)
 
 # Web Application
 The web application is built using FastAPI, a modern, fast, web framework for building APIs with Python. The trained model is integrated with the web application, enabling users to upload images of potato plants and get predictions for their health status (Early Blight, Late Blight, or Healthy). The frontend of the web app is developed with React and also with HTML, CSS, and JavaScript to create an interactive and user-friendly experience.
 
-## Screenshots
+## Web App User Interface-1 
 
 ![Web App without uploading](https://github.com/Akib-Raihan-4/Potato_disease_prediction/blob/main/SS_Frontend-without-prediction.png)
 
 
-## Screenshots
+## Web App User Interface-2
 
 ![Web App with uploading](https://github.com/Akib-Raihan-4/Potato_disease_prediction/blob/main/SS_Frontend-with-prediction.png)
 
