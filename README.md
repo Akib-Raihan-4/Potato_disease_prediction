@@ -7,6 +7,12 @@ Potato Plant Disease Detection is a project aimed at detecting two major disease
 The dataset used for training the model was obtained from Kaggle and can be found at the following link: [Potato Plant Disease Dataset](https://www.kaggle.com/datasets/arjuntejaswi/plant-village)
 . It contains images of potato plants affected by Early Blight, Late Blight, and Healthy plants.
 
+
+# Data Preprocessing
+Before feeding the images into the model, the data is preprocessed using two preprocessing pipelines. First, the images are resized to 256x256 pixels to maintain a consistent input size. Then, pixel values are rescaled to a range of [0, 1] to normalize the data.
+
+Data augmentation is applied during training to improve the model's ability to generalize. Random horizontal and vertical flips and random rotations are performed on the training data to create additional variations of the images.
+
 # Model Training
 The model was trained using TensorFlow and Keras libraries. The dataset of potato plant images was split into training, testing and validation sets to prevent overfitting. The deep learning model was trained on the training set and validated on the validation set to achieve the reported accuracy of 97%. The trained model is then saved for later use in the web application.
 
