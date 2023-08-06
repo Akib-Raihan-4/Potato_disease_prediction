@@ -14,7 +14,7 @@ Before feeding the images into the model, the data is preprocessed using two pre
 Data augmentation is applied during training to improve the model's ability to generalize. Random horizontal and vertical flips and random rotations are performed on the training data to create additional variations of the images.
 
 # Model Training
-The model was trained using TensorFlow and Keras libraries. The dataset of potato plant images was split into training, testing and validation sets to prevent overfitting. The deep learning model was trained on the training set and validated on the validation set to achieve the reported accuracy of 97%. The trained model is then saved for later use in the web application.
+The model is trained using the Adam optimizer and sparse categorical cross-entropy loss function. The training process is run for 50 epochs with a batch size of 32. During training, the model's accuracy and loss on both the training and validation datasets are recorded.
 
 # Visualizing Model Accuracy
 To visualize the accuracy of the trained model, Matplotlib was used. The accuracy metrics of the model are displayed graphically, providing insights into the model's performance during the training process.
