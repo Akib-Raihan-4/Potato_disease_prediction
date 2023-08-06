@@ -1,0 +1,7 @@
+tensorflow==2.13.0
+matplotlib.pyplot==3.7.2
+fastapi
+uvicorn
+fastapi-cors
+pillow
+python-multipart
